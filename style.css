@@ -394,6 +394,7 @@ img{
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 #notice > h3{
     width: 45%;
@@ -813,4 +814,49 @@ img{
     color: #555;
     font-size: 12px;
     line-height: 36px;
+}
+
+
+
+
+.popup{
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 7px 7px 10px rgba(0,0,0,0.15);
+    display: none;
+}
+.popup > h2{   
+    margin-bottom: 20px;
+}
+.popup > h3{
+    padding: 10px;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
+    margin-bottom: 20px;
+}
+.popup > p{
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d6d6d6;
+}
+.popup > a{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    color: #777;
+}
+.popup > a:hover{
+    color: #00704a;
+    text-decoration: underline;
 }

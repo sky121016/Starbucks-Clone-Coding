@@ -111,4 +111,18 @@ window.onload = function(){
         }
     }, 2000);
 
+
+
+    // popup
+    const popupBtn = document.getElementById("notice");
+    const popup = document.querySelector(".popup");
+    const popupClose = document.getElementById("popup-close");
+
+    popupBtn.addEventListener("click",function(){
+        popup.style.display = "block";
+    });
+    popupClose.addEventListener("click",function(){
+        popup.style.display = "none";
+    });
+
 }
