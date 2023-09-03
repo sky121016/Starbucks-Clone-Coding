@@ -66,7 +66,7 @@ window.onload = function(){
             promoOn = true;
         }else{
             promotionView.style.display = "none";
-            promoArrow.style.rotate = "180deg";
+            promoArrow.style.rotate = "0deg";
             promoOn = false;
         }
     });
