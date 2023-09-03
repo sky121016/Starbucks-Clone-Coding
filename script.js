@@ -72,6 +72,43 @@ window.onload = function(){
     });
 
 
+    // main banner opacity
+    const drinks = document.querySelectorAll(".drink");
+    let drinkCurrenIndex = 0;
+    const bannerBtn = document.querySelector(".banner-title > a");
+    const intervalId = setInterval(() => {
+        drinks[drinkCurrenIndex].style.opacity = "1";
+        drinks[drinkCurrenIndex].style.transition = "opacity 0.5s";
+        drinkCurrenIndex++;
+        console.log(drinkCurrenIndex);
+        if(drinkCurrenIndex === 3){
+            setTimeout(() => {
+                bannerBtn.style.opacity = "1";
+                bannerBtn.style.transition = "all 0.5s";
+            }, 500);
+            clearInterval(intervalId);
+        }
+    }, 500);
 
+
+    // notice slider
+    const noticeContainer = document.querySelector(".notice-container");
+    let noticeCurrentIndex = 0;
+    const noticeClone = noticeContainer.firstElementChild.cloneNode(true);
+    noticeContainer.appendChild(noticeClone);
+
+    setInterval(() => {
+        noticeCurrentIndex++;
+        noticeContainer.style.marginTop = - noticeCurrentIndex * 16 + "px";
+        noticeContainer.style.transition = "all 0.6s";
+
+        if(noticeCurrentIndex === 3){
+            setTimeout(() => {
+                noticeContainer.style.marginTop = "0";
+                noticeContainer.style.transition = "0s";
+                noticeCurrentIndex = 0;
+            }, 700);
+        }
+    }, 2000);
 
 }
